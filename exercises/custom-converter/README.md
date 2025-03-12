@@ -66,9 +66,10 @@ You don't need to change anything in your Workflow code. You only need to add a 
 
 ```
    ...
-   Result:
-   Status: COMPLETED
-   Output: [{"success":true,"at":{"$date":1709061724717}}]
+   Results:
+     Status          COMPLETED
+     Result          "Received Plain text input"
+     ResultEncoding  json/plain
 ```
 
 You have successfully implemented a Custom Data Converter, and in the next step, you'll
@@ -102,9 +103,10 @@ failed Workflow. Notice that the `Failure:` field should now display an encoded
 result, rather than a plain text error:
 
 ```
-   ...
-   Status: FAILED
-   Failure: &Failure{Message:Encoded failure,Source:,StackTrace:,Cause:&Failure{Message:Encoded failure,Source:TypeScriptSDK,StackTrace:,Cause:nil,FailureType:Failure_ApplicationFailureInfo,},FailureType:Failure_ActivityFailureInfo,}
+   Results:
+     Status   FAILED
+     Failure
+       Message: Encoded failure
 ```
 
 ### This is the end of the exercise.
